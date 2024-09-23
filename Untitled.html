@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnet OAA - Inicio de Sesión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .success-message {
+            display: none;
+            color: green;
+            margin-top: 20px;
+        }
+
+        .creator {
+            font-size: 12px;
+            color: gray;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>****** OAA - ******* Sesi&oacute;n</h2>
+        <form id="loginForm"><input type="text" id="username" placeholder="Usuario" required=""><br><input type="password" id="password" placeholder="Contraseña" required=""><br><button type="submit" class="login-btn">******* Sesi&oacute;n</button></form>
+        <p class="success-message" id="successMessage">Acceso concedido, &iexcl;bienvenido!</p>
+        <p class="creator">Creador: Nicol&aacute;s Vera</p>
+    </div>
+    <script>
+        function simulateLogin() {
+            // Evita que se envíe el formulario de verdad
+            event.preventDefault();
+            
+            // Oculta el formulario y muestra el mensaje de éxito
+            document.getElementById("loginForm").style.display = "none";
+            document.getElementById("successMessage").style.display = "block";
+        }
+    </script>
+
+<div style="color: red">Word to HTML trial - please <a href="https://wordtohtml.net/site/payment">Go PRO</a> to get whole HTML.</div>
+</body>
+
+</html>
